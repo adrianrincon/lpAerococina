@@ -6,22 +6,14 @@ namespace Aerococina
 {
     public partial class App : Application
     {
-        public static bool UseMockDataStore = true;
-        public static string BackendUrl = "https://localhost:5000";
+        public static string RutaDB;
 
-        public App()
+        public App(string rutaDB)
         {
             InitializeComponent();
-
-            if (UseMockDataStore)
-                DependencyService.Register<MockDataStore>();
-            else
-                DependencyService.Register<CloudDataStore>();
-
-            if (Device.RuntimePlatform == Device.iOS)
-                MainPage = new MainPage();
-            else
-                MainPage = new NavigationPage(new MainPage());
+            RutaDB = rutaDB;
+            Services.SqliteService.CrearTablas();
+            MainPage = new Views.Menu();
         }
     }
 }

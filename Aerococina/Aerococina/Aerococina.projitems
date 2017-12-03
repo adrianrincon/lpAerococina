@@ -9,36 +9,53 @@
     <Import_RootNamespace>Aerococina</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\CloudDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
-      <DependentUpon>AboutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ItemDetailPage.xaml.cs">
-      <DependentUpon>ItemDetailPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml.cs">
-      <DependentUpon>ItemsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml.cs">
-      <DependentUpon>NewItemPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MenuMenuItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MenuDetail.xaml.cs">
+      <DependentUpon>MenuDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MenuMaster.xaml.cs">
+      <DependentUpon>MenuMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CapturaProductos.xaml.cs">
+      <DependentUpon>CapturaProductos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Empleados\ListaEmpleados.xaml.cs">
+      <DependentUpon>ListaEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SqliteService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Employee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EmployeeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ItemDetailPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MenuDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MenuMaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CapturaProductos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Empleados\ListaEmpleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Empleados\" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Aerococina.Views.Empleados.ListaEmpleados">
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar" Clicked="Agregar_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="lvEmpleados">
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <TextCell Text="{Binding Name}" Detail="{Binding StatusDescr}" />
+              </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
