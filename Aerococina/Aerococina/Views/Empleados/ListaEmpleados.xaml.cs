@@ -8,17 +8,22 @@ namespace Aerococina.Views.Empleados
 {
     public partial class ListaEmpleados : ContentPage
     {
-        List<ViewModels.EmployeeViewModel> employeelistViewModel = new List<ViewModels.EmployeeViewModel>();
-
+        
         public ListaEmpleados()
         {
             InitializeComponent();
             CargarListaEmpleados();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            CargarListaEmpleados();
+        }
+
         void Agregar_Clicked(object sender, System.EventArgs e)
         {
-            throw new NotImplementedException();
+            Navigation.PushModalAsync(new Views.Empleados.AddEmployee());
         }
 
         async void Handle_Refreshing(object sender, System.EventArgs e)
@@ -29,8 +34,9 @@ namespace Aerococina.Views.Empleados
                 try
                 {
                     var sessionUser = (Models.User)App.Current.Properties["user"];
+                    List<ViewModels.EmployeeViewModel> employeelistViewModel = new List<ViewModels.EmployeeViewModel>();
 
-                    Models.ItemResult itemResult = await Controller.EmployeeController.EmployeeList(sessionUser.UserId);
+                    Models.ItemResult itemResult = await Controller.EmployeeController.EmployeeList(sessionUser.CompanyId);
                     if (itemResult.Result)
                     {
                         List<Models.Employee> employeeList = JsonConvert.DeserializeObject<List<Models.Employee>>(itemResult.Data["Result"].ToString());
@@ -40,12 +46,13 @@ namespace Aerococina.Views.Empleados
                             Email = f.Email,
                             EmployeeId = f.EmployeeId,
                             EmployeeNumber = f.EmployeeNumber,
-                            Name = f.Name,
+                            Name =f.Name,
                             Photo = f.Photo,
                             RegistrationDate = f.RegistrationDate,
                             Status = f.Status,
-                            StatusDescr = f.Status ? "Activo" : "Inactivo",
-                            Telephone = f.Telephone
+                            StatusDescr = f.Status ? "Activo" : "Baja",
+                            NameConcat=f.EmployeeNumber + " - " + f.Name,
+                            StatusColor = f.Status ? "Green" : "Red"
                         }));
 
                         employeelv.ItemsSource = employeelistViewModel;
@@ -67,8 +74,9 @@ namespace Aerococina.Views.Empleados
             try
             {
                 var sessionUser = (Models.User)App.Current.Properties["user"];
+                List<ViewModels.EmployeeViewModel> employeelistViewModel = new List<ViewModels.EmployeeViewModel>();
 
-                Models.ItemResult itemResult = await Controller.EmployeeController.EmployeeList(sessionUser.UserId);
+                Models.ItemResult itemResult = await Controller.EmployeeController.EmployeeList(sessionUser.CompanyId);
                 if(itemResult.Result)
                 {
                     List<Models.Employee> employeeList = JsonConvert.DeserializeObject<List<Models.Employee>>(itemResult.Data["Result"].ToString());
@@ -81,8 +89,10 @@ namespace Aerococina.Views.Empleados
                         Photo=f.Photo,
                         RegistrationDate=f.RegistrationDate,
                         Status=f.Status,
-                        StatusDescr=f.Status ? "Activo" : "Inactivo",
-                        Telephone=f.Telephone
+                        StatusDescr=f.Status ? "Activo" : "Baja",
+                        Telephone=f.Telephone,
+                        NameConcat = f.EmployeeNumber + " - " + f.Name,
+                        StatusColor=f.Status ? "Green" : "Red"
                     }));
 
                     employeelv.ItemsSource = employeelistViewModel;

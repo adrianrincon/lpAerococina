@@ -1,5 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Aerococina.Views.Empleados.AddEmployee">
 	<ContentPage.Content>
+        <StackLayout Padding="20">
+            <Entry x:Name="txtEmployeeNumber" Placeholder="Numero empleado" Keyboard="Numeric" />
+            <Entry x:Name="txtName" Placeholder="Nombre" Keyboard="Text" />
+            <Button x:Name="btnSave" Text="Guardar" Clicked="Handle_Clicked" />
+        </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

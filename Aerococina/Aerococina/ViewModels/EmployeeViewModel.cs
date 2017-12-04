@@ -48,7 +48,17 @@ namespace Aerococina.ViewModels
             get;
             set;
         }
+        public string NameConcat
+        {
+            get;
+            set;
+        }
         public DateTime RegistrationDate
+        {
+            get;
+            set;
+        }
+        public string StatusColor
         {
             get;
             set;

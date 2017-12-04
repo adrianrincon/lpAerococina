@@ -4,10 +4,10 @@
         <ToolbarItem Text="Agregar" Clicked="Agregar_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="employeelv" IsPullToRefreshEnabled="true" Refreshing="Handle_Refreshing" IsRefreshing="{Binding updating}">
+        <ListView x:Name="employeelv" IsPullToRefreshEnabled="true" Refreshing="Handle_Refreshing">
             <ListView.ItemTemplate>
               <DataTemplate>
-                <TextCell Text="{Binding Name}" Detail="{Binding StatusDescr}" />
+                <TextCell Text="{Binding NameConcat}" TextColor="Black" Detail="{Binding StatusDescr}" DetailColor="{Binding StatusColor}" />
               </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
