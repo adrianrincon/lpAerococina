@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Aerococina.Views.Security.Login">
+	<Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Entry x:Name="txtEmail" Text="jesus_rios91@hotmail.com" Placeholder="Nombre Usuario" Grid.Row="2" Grid.ColumnSpan="2" />
+        <Entry x:Name="txtPassword" Text="Legendary2017." Placeholder="Contrasena" IsPassword="true" Grid.Row="3" Grid.ColumnSpan="2"  />
+        <Button x:Name="btnIniciarSesion" Text="Iniciar Sesion" Grid.Row="5" Grid.Column="0" Clicked="btnIniciarSesion_Handle_Clicked"/>
+   
+        </Grid>
+</ContentPage>

@@ -13,7 +13,7 @@ namespace Aerococina
             InitializeComponent();
             RutaDB = rutaDB;
             Services.SqliteService.CrearTablas();
-            MainPage = new Views.Menu();
+            MainPage = new NavigationPage(new Views.Security.Login());
         }
     }
 }
