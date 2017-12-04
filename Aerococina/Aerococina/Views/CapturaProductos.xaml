@@ -16,9 +16,9 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <Entry x:Name="txtNumEmpleado" Placeholder="Numero de empleado" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
-            <Button x:Name="btnBuscarEmpleado" Text="B" WidthRequest="50" Grid.Row="0" Grid.Column="3" />
-            <Entry x:Name="txtNombre" Placeholder="Nombre" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
+            <Entry x:Name="txtEmployeeNumber" Placeholder="Numero de empleado" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
+            <Button x:Name="btnBuscarEmpleado" Text="B" Clicked="Handle_Clicked" WidthRequest="50" Grid.Row="0" Grid.Column="3" />
+            <Entry x:Name="txtName" Placeholder="Nombre" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
             <Button x:Name="btnProducto1" Text="Producto 1" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
             <Button x:Name="btnProducto2" Text="Producto 2" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" />
             <Label  Text="Total Vendido" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="Center" FontSize="20"/>

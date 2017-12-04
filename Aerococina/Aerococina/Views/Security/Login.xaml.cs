@@ -27,8 +27,16 @@ namespace Aerococina.Views.Security
                         if (App.Current.Properties.Count > 0)
                             RemoveProperties();
 
+                        var catalogsAdded = await Services.SqliteService.AgregarCatalogos(itemUser.CompanyId);
+                        if(!catalogsAdded)
+                        {
+                            hud.Cancel();
+                            hud.ShowErrorMessage("Error al cargar catalogos");
+                        }
+
                         App.Current.Properties.Add("user", itemUser);
                         await App.Current.SavePropertiesAsync();
+
 
                         hud.Cancel();
 
@@ -56,5 +64,6 @@ namespace Aerococina.Views.Security
                 throw ex;
             }
         }
+
     }
 }
