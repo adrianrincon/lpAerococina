@@ -10,6 +10,7 @@ namespace Aerococina.Views.Security
         public Login()
         {
             InitializeComponent();
+            imgLogo.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("logo.jpg") : ImageSource.FromFile("Images/waterfront.jpg");
         }
 
         async void btnIniciarSesion_Handle_Clicked(object sender, System.EventArgs e)

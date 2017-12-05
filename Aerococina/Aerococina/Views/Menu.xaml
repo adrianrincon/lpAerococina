@@ -8,7 +8,7 @@
     <pages:MenuMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
-    <NavigationPage>
+    <NavigationPage BarTextColor="White" BarBackgroundColor="#003454">
       <x:Arguments>
         <pages:MenuDetail />
       </x:Arguments>

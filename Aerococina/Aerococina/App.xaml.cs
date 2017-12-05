@@ -13,7 +13,8 @@ namespace Aerococina
             InitializeComponent();
             RutaDB = rutaDB;
             Services.SqliteService.CrearTablas();
-            MainPage = new NavigationPage(new Views.Security.Login());
+            MainPage = new NavigationPage(new Views.Security.Login())
+            { BarBackgroundColor = Color.FromHex("#003454")};
         }
     }
 }
