@@ -15,6 +15,7 @@ namespace Aerococina.Views.Security
 
         async void btnIniciarSesion_Handle_Clicked(object sender, System.EventArgs e)
         {
+            #region btnIniciarSession_Click
             var hud = DependencyService.Get<IHud>();
             hud.ShowLoadingWithMessage("Cargando...");
             if (!string.IsNullOrEmpty(txtEmail.Text) || !string.IsNullOrEmpty(txtPassword.Text))
@@ -29,7 +30,7 @@ namespace Aerococina.Views.Security
                             RemoveProperties();
 
                         var catalogsAdded = await Services.SqliteService.AgregarCatalogos(itemUser.CompanyId);
-                        if(!catalogsAdded)
+                        if (!catalogsAdded)
                         {
                             hud.Cancel();
                             hud.ShowErrorMessage("Error al cargar catalogos");
@@ -51,11 +52,12 @@ namespace Aerococina.Views.Security
             }
             else
                 hud.ShowErrorMessage("Todos los campos son requeridos.");
-
+            #endregion
         }
 
         void RemoveProperties()
         {
+            #region RemoveProperties
             try
             {
                 App.Current.Properties.Remove("user");
@@ -64,6 +66,7 @@ namespace Aerococina.Views.Security
             {
                 throw ex;
             }
+            #endregion
         }
 
     }

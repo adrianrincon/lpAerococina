@@ -42,6 +42,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controller\SecurityController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controller\EmployeeController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\EmployeeProduct.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controller\EmployeeProductController.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />

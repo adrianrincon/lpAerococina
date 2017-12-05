@@ -45,13 +45,17 @@ namespace Aerococina.ViewModels
         }
         public string StatusDescr
         {
-            get;
-            set;
+            get
+            {
+                return Status ? "Activo" : "Inactivo";
+            }
         }
         public string NameConcat
         {
-            get;
-            set;
+            get
+            {
+                return EmployeeNumber + " - " + Name;
+            }
         }
         public DateTime RegistrationDate
         {
@@ -60,8 +64,10 @@ namespace Aerococina.ViewModels
         }
         public string StatusColor
         {
-            get;
-            set;
+            get
+            {
+                return Status ? "Green" : "Red";
+            }
         }
     }
 }

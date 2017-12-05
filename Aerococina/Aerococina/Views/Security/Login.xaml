@@ -17,7 +17,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Image x:Name="imgLogo"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
-        <Entry x:Name="txtEmail"   Text="jesus_rios91@hotmail.com" Placeholder="Nombre Usuario" Grid.Row="2" Grid.ColumnSpan="2" />
+        <Entry x:Name="txtEmail"   Text="admin@dataproducts.com" Placeholder="Nombre Usuario" Grid.Row="2" Grid.ColumnSpan="2" />
         <Entry x:Name="txtPassword" Text="Legendary2017." Placeholder="Contrasena" IsPassword="true" Grid.Row="3" Grid.ColumnSpan="2"  />
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Aerococina.Views.CapturaProductos">
-	<StackLayout Padding="20 ">
-        <Grid>
+	
+        <Grid Padding="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -14,15 +14,16 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <Entry x:Name="txtEmployeeNumber" Placeholder="Numero de empleado" Completed="Handle_Completed" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
-            <Button x:Name="btnBuscarEmpleado" Text="B" Clicked="Handle_Clicked" WidthRequest="50" Grid.Row="0" Grid.Column="3" />
-            <Entry x:Name="txtName" Placeholder="Nombre" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
-            <Button x:Name="btnProducto1" Text="Producto 1" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
-            <Button x:Name="btnProducto2" Text="Producto 2" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" />
+            <Entry x:Name="txtEmployeeNumber" Placeholder="Numero de empleado" Keyboard="Numeric" Completed="Handle_Completed" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>   
+            <Entry x:Name="txtName" Placeholder="Nombre" IsEnabled="false" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
+            <Button x:Name="btnProducto1" TextColor="White" BackgroundColor="#003454" Text="Producto 1" Clicked="btnProducto1_Clicked" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Button x:Name="btnProducto2" TextColor="White" BackgroundColor="#003454" Text="Producto 2" Clicked="btnProducto2_Clicked" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" />
             <Label  Text="Total Vendido" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="Center" FontSize="20"/>
             <Label x:Name="lblTotalVendido" Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="Center" FontSize="30"/>
+            <Button x:Name="btnSendServices" TextColor="White" BackgroundColor="#003454" Text="Subir Consumos" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Clicked="btnSubirServicios_Clicked" />
         </Grid>
-    </StackLayout>
 </ContentPage>

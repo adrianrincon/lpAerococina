@@ -49,10 +49,7 @@ namespace Aerococina.Views.Empleados
                             Name =f.Name,
                             Photo = f.Photo,
                             RegistrationDate = f.RegistrationDate,
-                            Status = f.Status,
-                            StatusDescr = f.Status ? "Activo" : "Baja",
-                            NameConcat=f.EmployeeNumber + " - " + f.Name,
-                            StatusColor = f.Status ? "Green" : "Red"
+                            Status = f.Status
                         }));
 
                         employeelv.ItemsSource = employeelistViewModel;
@@ -89,10 +86,7 @@ namespace Aerococina.Views.Empleados
                         Photo=f.Photo,
                         RegistrationDate=f.RegistrationDate,
                         Status=f.Status,
-                        StatusDescr=f.Status ? "Activo" : "Baja",
-                        Telephone=f.Telephone,
-                        NameConcat = f.EmployeeNumber + " - " + f.Name,
-                        StatusColor=f.Status ? "Green" : "Red"
+                        Telephone=f.Telephone
                     }));
 
                     employeelv.ItemsSource = employeelistViewModel;

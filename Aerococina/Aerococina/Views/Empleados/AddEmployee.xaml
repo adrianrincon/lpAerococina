@@ -4,7 +4,7 @@
         <StackLayout Padding="20">
             <Entry x:Name="txtEmployeeNumber" Placeholder="Numero empleado" Keyboard="Numeric" />
             <Entry x:Name="txtName" Placeholder="Nombre" Keyboard="Text" />
-            <Button x:Name="btnSave" Text="Guardar" Clicked="Handle_Clicked" />
+            <Button x:Name="btnSave" TextColor="White" BackgroundColor="#003454" Text="Guardar" Clicked="Handle_Clicked" />
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
